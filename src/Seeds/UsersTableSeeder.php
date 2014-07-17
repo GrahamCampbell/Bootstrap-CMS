@@ -42,6 +42,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->delete();
 
         $user = array(
+            'id'           => 1,
             'first_name'   => 'CMS',
             'last_name'    => 'Admin',
             'email'        => 'admin@dsmg.co.uk',
@@ -52,6 +53,7 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = array(
+            'id'           => 2,
             'first_name'   => 'CMS',
             'last_name'    => 'Semi-Admin',
             'email'        => 'semiadmin@dsmg.co.uk',
@@ -62,6 +64,7 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = array(
+            'id'           => 3,
             'first_name'   => 'CMS',
             'last_name'    => 'Moderator',
             'email'        => 'moderator@dsmg.co.uk',
@@ -72,6 +75,7 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = array(
+            'id'           => 4,
             'first_name'   => 'CMS',
             'last_name'    => 'Blogger',
             'email'        => 'blogger@dsmg.co.uk',
@@ -82,6 +86,7 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = array(
+            'id'           => 5,
             'first_name'   => 'CMS',
             'last_name'    => 'Editor',
             'email'        => 'editor@dsmg.co.uk',
@@ -92,6 +97,7 @@ class UsersTableSeeder extends Seeder
         Credentials::getUserProvider()->create($user);
 
         $user = array(
+            'id'           => 6,
             'first_name'   => 'CMS',
             'last_name'    => 'User',
             'email'        => 'user@dsmg.co.uk',

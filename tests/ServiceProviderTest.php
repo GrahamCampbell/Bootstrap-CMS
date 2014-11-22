@@ -34,23 +34,23 @@ class ServiceProviderTest extends AbstractTestCase
         $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Navigation\Factory');
     }
 
-    public function testCommentProviderIsInjectable()
+    public function testCommentRepositoryIsInjectable()
     {
-        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Providers\CommentProvider');
+        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Repositories\CommentRepository');
     }
 
-    public function testEventProviderIsInjectable()
+    public function testEventRepositoryIsInjectable()
     {
-        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Providers\EventProvider');
+        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Repositories\EventRepository');
     }
 
-    public function testPageProviderIsInjectable()
+    public function testPageRepositoryIsInjectable()
     {
-        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Providers\PageProvider');
+        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Repositories\PageRepository');
     }
 
-    public function testPostProviderIsInjectable()
+    public function testPostRepositoryIsInjectable()
     {
-        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Providers\PostProvider');
+        $this->assertIsInjectable('GrahamCampbell\BootstrapCMS\Repositories\PostRepository');
     }
 }

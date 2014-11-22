@@ -14,6 +14,8 @@
  * GNU Affero General Public License for more details.
  */
 
+use GrahamCampbell\BootstrapCMS\Facades\PageRepository;
+
 /*
 |--------------------------------------------------------------------------
 | Application Event Listeners
@@ -28,11 +30,8 @@ if (Config::get('graham-campbell/core::commands')) {
     Event::subscribe($subscriber);
 }
 
-$subscriber = App::make('GrahamCampbell\BootstrapCMS\Subscribers\CoreSubscriber');
-Event::subscribe($subscriber);
-
 $subscriber = App::make('GrahamCampbell\BootstrapCMS\Subscribers\NavigationSubscriber');
 Event::subscribe($subscriber);
 
 $observer = App::make('GrahamCampbell\BootstrapCMS\Observers\PageObserver');
-PageProvider::observe($observer);
+PageRepository::observe($observer);

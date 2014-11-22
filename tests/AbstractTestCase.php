@@ -16,9 +16,7 @@
 
 namespace GrahamCampbell\Tests\BootstrapCMS;
 
-use GrahamCampbell\TestBench\Traits\HelperTestCaseTrait;
-use GrahamCampbell\TestBench\Traits\LaravelTestCaseTrait;
-use Illuminate\Foundation\Testing\TestCase;
+use GrahamCampbell\TestBench\AbstractAppTestCase;
 
 /**
  * This is the abstract test case class.
@@ -27,28 +25,16 @@ use Illuminate\Foundation\Testing\TestCase;
  * @copyright 2013-2014 Graham Campbell
  * @license   <https://github.com/GrahamCampbell/Bootstrap-CMS/blob/master/LICENSE.md> AGPL 3.0
  */
-abstract class AbstractTestCase extends TestCase
+abstract class AbstractTestCase extends AbstractAppTestCase
 {
-    use HelperTestCaseTrait, LaravelTestCaseTrait;
-
-    /**
-     * Creates the application.
-     *
-     * @return \Symfony\Component\HttpKernel\HttpKernelInterface
-     */
-    public function createApplication()
-    {
-        $unitTesting = true;
-        $testEnvironment = 'testing';
-        return require __DIR__.'/../bootstrap/start.php';
-    }
-
     /**
      * Get the service provider class.
      *
+     * @param \Illuminate\Contracts\Foundation\Application $app
+     *
      * @return string
      */
-    protected function getServiceProviderClass()
+    protected function getServiceProviderClass($app)
     {
         return 'GrahamCampbell\BootstrapCMS\BootstrapCMSServiceProvider';
     }

@@ -34,7 +34,7 @@ abstract class AbstractTestCase extends BaseTestCase
      */
     protected function start()
     {
-        $this->app['artisan']->call('app:install');
+        $this->app->make('Illuminate\Contracts\Console\Kernel')->call('app:install');
     }
 
     protected function callAgain()
@@ -43,7 +43,7 @@ abstract class AbstractTestCase extends BaseTestCase
 
         $this->start();
 
-        return call_user_func_array(array($this, 'call'), func_get_args());
+        return call_user_func_array([$this, 'call'], func_get_args());
     }
 
     /**

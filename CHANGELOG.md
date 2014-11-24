@@ -2,6 +2,14 @@ CHANGE LOG
 ==========
 
 
+## V0.9 Alpha (Upcoming)
+
+* Upgraded to laravel 5.0
+* Upgraded to bootstrap 3.3.1
+* Renamed providers to repositories
+* Cleaned up assets
+
+
 ## V0.8.3 Alpha (Upcoming)
 
 * Updated dependencies

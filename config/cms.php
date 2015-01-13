@@ -88,6 +88,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Blog text editor
+    |--------------------------------------------------------------------------
+    |
+    | This defines which editor will be used for creating and editing blog posts.
+    |
+    | The available options are 'default' and 'fraola'. Please note that if you choose
+    | Fraola for legal reasons you will have to manually download it. Once you have,
+    | just put it in the public/assets folder in a folder called 'fraola'.
+    |
+    */
+    'editor' => 'default',
+
+    /*
+    |--------------------------------------------------------------------------
     | Comment Fetch Interval
     |--------------------------------------------------------------------------
     |

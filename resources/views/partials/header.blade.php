@@ -4,6 +4,9 @@
 
 {!! HTML::style('//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css') !!}
 {!! HTML::style('//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css') !!}
+<link href="/assets/fraola/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets//fraola/css/froala_editor.min.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/fraola/css/froala_style.min.css" rel="stylesheet" type="text/css" />
 {!! Asset::styles('main') !!}
 @section('css')
 @show

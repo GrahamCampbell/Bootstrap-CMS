@@ -26,8 +26,14 @@
 {!! HTML::script('//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.1/jquery.timeago.min.js') !!}
 {!! HTML::script('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js') !!}
 {!! Asset::scripts('main') !!}
+<script src="{!! asset('/assets/fraola/js/froala_editor.min.js') !!}"></script>
 @section('js')
 @show
 @if (Config::get('analytics.google'))
     @include('partials.analytics')
 @endif
+<script>
+    $(function() {
+        $('#edit').editable({inlineMode: false, height: 300})
+    });
+</script>

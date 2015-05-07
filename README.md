@@ -53,7 +53,7 @@ Bootstrap CMS uses Laravel's queue system to offload jobs such as sending emails
 
 ## Setting Up Caching
 
-Bootstrap CMS provides caching functionality, and when enabled, requires a caching server.
+Bootstrap CMS provides caching functionality, and when enable, requires a caching server.
 Note that caching will not work with Laravel's `file` or `database` cache drivers.
 
 1. Choose your poison - I'd recommend [Redis](http://redis.io).

@@ -14,7 +14,7 @@
     a{color:#dc8100;text-decoration:none;}
     a:hover{color:#333;text-decoration:none;}
 </style>
-<link rel="shortcut icon" href="{!! asset('favicon.ico') !!}">
+<link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
 <article>

@@ -12,7 +12,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/BootstrapCMS/Asset"
+            "url": "https://github.com/jwilson8767/LogViewer"
         },
         {
             "type": "vcs",
@@ -23,7 +23,6 @@
         "php": ">=5.5.0",
         "laravel/framework": "5.0.*",
         "illuminate/html": "5.0.*",
-        "lightgear/asset": "~2.0",
         "fideloper/proxy": "~3.0",
         "graham-campbell/exceptions": "~1.0",
         "graham-campbell/core": "~2.0",
@@ -34,7 +33,7 @@
         "graham-campbell/credentials": "0.4.*",
         "graham-campbell/navigation": "~2.0",
         "graham-campbell/contact": "0.3.*",
-        "graham-campbell/logviewer": "0.3.*",
+        "graham-campbell/logviewer": "dev-Elixir-Support",
         "mccool/laravel-auto-presenter": "~3.0",
         "barryvdh/laravel-debugbar": "~2.0"
     },

@@ -1,0 +1,23 @@
+<?php  
+return [
+	'create_page'     	=> 'Create Page',
+	'create_new_page' 	=> 'Create New Page',
+	'delete_message'   	=> 'You are about to delete this page! This process cannot be undone.',
+	'please_edit_the_page' => 'Please edit the page',
+	'show_page'       	=> 'Show Page',
+	'delete_page'     	=> 'Delete Page',
+	'save_page'       	=> 'Save Page',
+	'page_title'	   	=> 'Page Title',
+	'page_nav_title'	=> 'Page Nav Title',
+	'page_slug'			=> 'Page Slug',
+	'page_icon'			=> 'Page Icon',
+	'page_body'			=> 'Page Body',
+	'page_css'			=> 'Page CSS',
+	'page_js'			=> 'Page JS',
+	'show_title'		=> 'Show Title',
+	'show_on_nav'		=> 'Show On Nav',
+	'edit_page'			=> 'Edit Page',
+	'page_owner'		=> 'Page Owner',
+	'page_created'		=> 'Page Created',
+	'last_updated'		=> 'Last Updated',
+];

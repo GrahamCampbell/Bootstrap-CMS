@@ -38,7 +38,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <a href="{!! URL::route('account.logout') !!}">
-                                        <i class="fa fa-power-off fa-fw"></i> Logout
+                                        <i class="fa fa-power-off fa-fw"></i> {{ trans('globals.logout') }}
                                     </a>
                                 </li>
                             </ul>
@@ -46,13 +46,13 @@
                     @else
                         <li {!! (Request::is('account/login') ? 'class="active"' : '') !!}>
                             <a href="{!! URL::route('account.login') !!}">
-                                Login
+                                {{ trans('globals.login') }}
                             </a>
                         </li>
                         @if (Config::get('credentials.regallowed'))
                             <li {!! (Request::is('account/register') ? 'class="active"' : '') !!}>
                                 <a href="{!! URL::route('account.register') !!}">
-                                    Register
+                                    {{ trans('globals.register') }}
                                 </a>
                             </li>
                         @endif

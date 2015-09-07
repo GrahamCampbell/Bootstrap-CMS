@@ -37,7 +37,7 @@ return [
     |
     */
 
-    'email' => env('CONTACT_MAIL', 'admin@example.com'),
+    'email' => 'admin@example.com',
 
     /*
     |--------------------------------------------------------------------------

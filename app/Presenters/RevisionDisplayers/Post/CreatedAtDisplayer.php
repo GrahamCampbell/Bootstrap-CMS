@@ -25,7 +25,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Created Post';
+        return trans('post.created_post');
     }
 
     /**
@@ -36,7 +36,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You created a new post called'.$this->name();
+        return trans('posts.created_post_called').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user created a new post called'.$this->name();
+        return trans('posts.user_created_post_called').$this->name();
     }
 }

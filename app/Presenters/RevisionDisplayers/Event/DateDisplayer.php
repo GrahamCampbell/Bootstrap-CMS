@@ -26,7 +26,7 @@ class DateDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the date of'.$this->name();
+        return trans('events.updated_date_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class DateDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the date of'.$this->name();
+        return trans('events.user_updated_date_of').$this->name();
     }
 }

@@ -86,7 +86,7 @@ class PageController extends AbstractController
 
         // write flash message and redirect
         return Redirect::route('pages.show', ['pages' => $page->slug])
-            ->with('success', 'Your page has been created successfully.');
+            ->with('success', trans('pages.your_page_has_been_created_successfully'));
     }
 
     /**
@@ -155,7 +155,7 @@ class PageController extends AbstractController
 
         // write flash message and redirect
         return Redirect::route('pages.show', ['pages' => $page->slug])
-            ->with('success', 'Your page has been updated successfully.');
+            ->with('success', trans('pages.your_page_has_been_updated_successfully'));
     }
 
     /**
@@ -174,11 +174,11 @@ class PageController extends AbstractController
             $page->delete();
         } catch (Exception $e) {
             return Redirect::route('pages.show', ['pages' => $page->slug])
-                ->with('error', 'You cannot delete this page.');
+                ->with('error', trans('pages.you_cannot_delete_this_page'));
         }
 
         // write flash message and redirect
-        return Redirect::to('pages/home')->with('success', 'Your page has been deleted successfully.');
+        return Redirect::to('pages/home')->with('success', trans('pages.your_page_has_been_deleted_successfully'));
     }
 
     /**
@@ -219,10 +219,10 @@ class PageController extends AbstractController
         }
 
         if ($slug == 'home') {
-            throw new Exception('The homepage is missing.');
+            throw new Exception(trans('pages.the_homepage_is_missing'));
         }
 
-        throw new NotFoundHttpException('Page Not Found');
+        throw new NotFoundHttpException(trans('pages.page_not_found'));
     }
 
     /**
@@ -238,12 +238,12 @@ class PageController extends AbstractController
         if ($slug == 'home') {
             if ($slug != $input['slug']) {
                 return Redirect::route('pages.edit', ['pages' => $slug])->withInput()
-                    ->with('error', 'You cannot change the homepage slug.');
+                    ->with('error', trans('pages.you_cannot_change_the_homepage_slug'));
             }
 
             if ($input['show_nav'] == false) {
                 return Redirect::route('pages.edit', ['pages' => $slug])->withInput()
-                    ->with('error', 'The homepage must remain on the navigation bar.');
+                    ->with('error', trans('pages.the_homepage_must_remain_on_the_navigation_bar'));
             }
         }
     }

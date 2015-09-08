@@ -25,7 +25,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Deleted Post';
+        return trans('posts.deleted_post');
     }
 
     /**
@@ -36,7 +36,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You deleted the post called'.$this->name();
+        return trans('posts.deleted_post_called').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user deleted the post called'.$this->name();
+        return trans('posts.user_deleted_post_called').$this->name();
     }
 }

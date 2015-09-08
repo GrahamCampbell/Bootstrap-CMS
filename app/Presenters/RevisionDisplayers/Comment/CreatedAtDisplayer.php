@@ -25,7 +25,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Created Comment';
+        return trans('posts.created_comment');
     }
 
     /**
@@ -36,7 +36,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You commented on'.$this->name();
+        return trans('posts.you_commented_on').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user commented on'.$this->name();
+        return trans('posts.this_user_commented_on').$this->name();
     }
 }

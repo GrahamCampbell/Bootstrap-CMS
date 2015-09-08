@@ -27,10 +27,10 @@ class ShowTitleDisplayer extends AbstractDisplayer
     protected function current()
     {
         if ($this->wrappedObject->new_value) {
-            return 'You unhid the title of '.$this->name();
+            return trans('pages.unhid_title_of').$this->name();
         }
 
-        return 'You hid the title of '.$this->name();
+        return trans('pages.hid_title_of').$this->name();
     }
 
     /**
@@ -42,9 +42,9 @@ class ShowTitleDisplayer extends AbstractDisplayer
     protected function external()
     {
         if ($this->wrappedObject->new_value) {
-            return 'This user unhid the title of '.$this->name();
+            return trans('pages.user_unhid_title_of').$this->name();
         }
 
-        return 'This user hid the title of '.$this->name();
+        return trans('pages.user_hid_title_of').$this->name();
     }
 }

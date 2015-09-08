@@ -1,5 +1,6 @@
 <?php  
 return [
+	//views
 	'yes'          	=> 'Yes',
 	'no'           	=> 'No',
 	'are_you_sure' 	=> 'Are you sure?',
@@ -19,6 +20,20 @@ return [
 						            the moment. Most site maintenance takes under 5 minutes, so you can
 						            expect us to be back online shortly",
     'the_web_team'	=> 'The Web Team',
+
+    //app
+    
+    'cannot_delete_homepage' => 'You cannot delete the homepage.',
+    'admin_panel'	=> 'Admin Panel',
+    'logs'			=> 'Logs',
+    'cloudflare'	=> 'CloudFlare',
+    'users'			=> 'Users',
+    'view_profile'	=> 'View Profile',
+    'view_history'	=> 'View History',
+    'view_logs'		=> 'View Logs',
+    'view_users'	=> 'View Users',
+    'create_users'	=> 'Create Users',
+    'rate_limit_exceeded' => 'Rate limit exceeded.',
 
 
 ];

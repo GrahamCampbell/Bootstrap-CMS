@@ -26,7 +26,7 @@ class JsDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the js of'.$this->name();
+        return trans('pages.updated_js_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class JsDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the js of'.$this->name();
+        return trans('pages.user_updated_js_of').$this->name();
     }
 }

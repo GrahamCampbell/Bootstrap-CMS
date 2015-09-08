@@ -26,7 +26,7 @@ class SlugDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the slug of'.$this->name();
+        return trans('pages.updated_slug_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class SlugDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the slug of'.$this->name();
+        return trans('pages.user_updated_slug_of').$this->name();
     }
 }

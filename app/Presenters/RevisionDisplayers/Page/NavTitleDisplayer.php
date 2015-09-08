@@ -26,7 +26,7 @@ class NavTitleDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the nav title of'.$this->name();
+        return trans('pages.updated_nav_title_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class NavTitleDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the nav title of'.$this->name();
+        return trans('pages.user_updated_nav_title_of').$this->name();
     }
 }

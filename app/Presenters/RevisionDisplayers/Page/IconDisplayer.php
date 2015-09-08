@@ -26,7 +26,7 @@ class IconDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the icon of'.$this->name();
+        return trans('pages.updated_icon_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class IconDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the icon of'.$this->name();
+        return trans('pages.user_updated_icon_of').$this->name();
     }
 }

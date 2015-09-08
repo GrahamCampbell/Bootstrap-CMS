@@ -27,7 +27,7 @@ abstract class AbstractDisplayer extends AbstractRevisionDisplayer
      */
     public function title()
     {
-        return 'Updated Page';
+        return trans('pages.updated_page');
     }
 
     /**

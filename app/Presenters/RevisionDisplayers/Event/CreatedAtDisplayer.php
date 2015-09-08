@@ -25,7 +25,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Created Event';
+        return trans('events.created_event');
     }
 
     /**
@@ -36,7 +36,7 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You created a new event called'.$this->name();
+        return trans('events.you_created_new_event_called').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class CreatedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user created a new event called'.$this->name();
+        return trans('events.user_created_new_event_called').$this->name();
     }
 }

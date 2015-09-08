@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-Create Page
+{{ trans('pages.create_page') }}
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>Create Page</h1>
+<h1>{{ trans('pages.create_page') }}</h1>
 </div>
 @stop
 
@@ -15,7 +15,7 @@ Create Page
     <?php
     $form = ['url' => URL::route('pages.store'),
         'method' => 'POST',
-        'button' => 'Create New Page',
+        'button' => trans('pages.create_new_page'),
         'defaults' => [
             'title' => '',
             'nav_title' => '',

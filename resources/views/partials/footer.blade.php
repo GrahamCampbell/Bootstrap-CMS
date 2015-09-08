@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-8">
                 <p class="text-muted credit">
-                    &copy; <a href="https://github.com/GrahamCampbell">{{ Config::get('cms.author') }}</a> 2015. All rights reserved.
+                    &copy; <a href="https://github.com/GrahamCampbell">{{ config('cms.author') }}</a> 2015. All rights reserved.
                 </p>
             </div>
             <div class="col-xs-4">

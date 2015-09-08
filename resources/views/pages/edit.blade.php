@@ -32,21 +32,19 @@
 <div class="well">
     <?php
     $form = ['url' => URL::route('pages.update', ['pages' => $page->slug]),
-            'method'  => 'PATCH',
-            'button'  => trans('pages.save_page'),
             '_method' => 'PATCH',
             'method'  => 'POST',
-            'button'  => 'Save Page',
+            'button'  => trans('pages.save_page'),
             'defaults' => [
-            'title' => $page->title,
-            'nav_title' => $page->nav_title,
-            'slug' => $page->slug,
-            'icon' => $page->icon,
-            'body' => $page->body,
-            'css' => $page->css,
-            'js' => $page->js,
-            'show_title' => ($page->show_title == true),
-            'show_nav' => ($page->show_nav == true),
+                'title' => $page->title,
+                'nav_title' => $page->nav_title,
+                'slug' => $page->slug,
+                'icon' => $page->icon,
+                'body' => $page->body,
+                'css' => $page->css,
+                'js' => $page->js,
+                'show_title' => ($page->show_title == true),
+                'show_nav' => ($page->show_nav == true),
     ], ];
     ?>
     @include('pages.form')

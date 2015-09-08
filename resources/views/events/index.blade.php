@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-{{ trans('events.events') }}
+Events
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>{{ trans('events.events') }}</h1>
+<h1>Events</h1>
 </div>
 @stop
 
@@ -15,16 +15,16 @@
     <div class="col-xs-8">
         <p class="lead">
             @if (count($events) == 0)
-                {{ trans('events.no_events') }}
+                There are currently no events.
             @else
-                {{ trans('events.our_events') }}:
+                Here you may find our events:
             @endif
         </p>
     </div>
     @auth('edit')
         <div class="col-xs-4">
             <div class="pull-right">
-                <a class="btn btn-primary" href="{!! URL::route('events.create') !!}"><i class="fa fa-calendar"></i> {{ trans('events.new_event') }}</a>
+                <a class="btn btn-primary" href="{!! URL::route('events.create') !!}"><i class="fa fa-calendar"></i> New Event</a>
             </div>
         </div>
     @endauth
@@ -35,16 +35,9 @@
         <strong>{!! $event->date->format(Config::get('date.php_display_format')) !!}</strong>
     </p>
     <p>
-        <a class="btn btn-success" href="{!! URL::route('events.show', array('events' => $event->id)) !!}">
-            <i class="fa fa-file-text"></i> {{ trans('events.show_event') }}
-        </a>
+        <a class="btn btn-success" href="{!! URL::route('events.show', array('events' => $event->id)) !!}"><i class="fa fa-file-text"></i> Show Event</a>
         @auth('edit')
-             <a class="btn btn-info" href="{!! URL::route('events.edit', array('events' => $event->id)) !!}">
-                <i class="fa fa-pencil-square-o"></i> {{ trans('events.edit_event') }}
-            </a> 
-            <a class="btn btn-danger" href="#delete_event_{!! $event->id !!}" data-toggle="modal" data-target="#delete_event_{!! $event->id !!}">
-                <i class="fa fa-times"></i> {{ trans('events.delete_event') }}
-            </a>
+             <a class="btn btn-info" href="{!! URL::route('events.edit', array('events' => $event->id)) !!}"><i class="fa fa-pencil-square-o"></i> Edit Event</a> <a class="btn btn-danger" href="#delete_event_{!! $event->id !!}" data-toggle="modal" data-target="#delete_event_{!! $event->id !!}"><i class="fa fa-times"></i> Delete Event</a>
         @endauth
     </p>
     <br>

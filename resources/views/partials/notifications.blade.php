@@ -1,7 +1,7 @@
 @if (isset($errors) && count($errors->all()) > 0)
 <div class="alert alert-danger cms-alert">
     <a class="close" data-dismiss="alert">×</a>
-    {{ trans('validation.check_below') }}
+    Please check the form below for errors
 </div>
 @endif
 

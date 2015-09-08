@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-{{ trans('globals.edit') }} {{ $event->title }}
+Edit {{ $event->title }}
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>{{ trans('globals.edit') }} {{ $event->title }}</h1>
+<h1>Edit {{ $event->title }}</h1>
 </div>
 @stop
 
@@ -14,17 +14,12 @@
 <div class="row">
     <div class="col-xs-6">
         <p class="lead">
-            {{ trans('events.please_edit_the_event') }}:
+            Please edit the event:
         </p>
     </div>
     <div class="col-xs-6">
         <div class="pull-right">
-            <a class="btn btn-success" href="{!! URL::route('events.show', array('events' => $event->id)) !!}">
-                <i class="fa fa-file-text"></i> {{ trans('events.show_event') }}
-            </a> 
-            <a class="btn btn-danger" href="#delete_event" data-toggle="modal" data-target="#delete_event">
-                <i class="fa fa-times"></i> {{ trans('events.delete_event') }}
-            </a>
+            <a class="btn btn-success" href="{!! URL::route('events.show', array('events' => $event->id)) !!}"><i class="fa fa-file-text"></i> Show Event</a> <a class="btn btn-danger" href="#delete_event" data-toggle="modal" data-target="#delete_event"><i class="fa fa-times"></i> Delete Event</a>
         </div>
         </div>
 </div>
@@ -34,12 +29,12 @@
     $form = ['url' => URL::route('events.update', ['events' => $event->id]),
              '_method'  => 'PATCH',
              'method'   => 'POST',
-             'button'   => 'Save Event',
+             'button'   => trans('events.save_event'),
              'defaults' => [
-             'title'    => $event->title,
-             'date'     => $event->date->format(Config::get('date.php_format')),
-             'location' => $event->location,
-             'body'     => $event->body,
+                 'title'    => $event->title,
+                 'date'     => $event->date->format(Config::get('date.php_format')),
+                 'location' => $event->location,
+                 'body'     => $event->body,
     ], ];
     ?>
     @include('events.form')

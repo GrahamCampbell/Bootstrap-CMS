@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-{{ trans('events.create_event') }}
+Create Event
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>{{ trans('events.create_event') }}</h1>
+<h1>Create Event</h1>
 </div>
 @stop
 
@@ -15,7 +15,7 @@
     <?php
     $form = ['url' => URL::route('events.store'),
         'method'   => 'POST',
-        'button'   => trans('events.create_new_event'),
+        'button'   => 'Create New Event',
         'defaults' => [
             'title'    => '',
             'date'     => Carbon\Carbon::now()->addMinutes(30)->format(Config::get('date.php_format')),

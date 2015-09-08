@@ -4,25 +4,25 @@
     <input type="hidden" name="_method" value="{{ $form['_method'] }}">
 
     <div class="form-group{!! ($errors->has('title')) ? ' has-error' : '' !!}">
-        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="title">{{ trans('posts.post_title') }}</label>
+        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="title">Post Title</label>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-10">
-            <input name="title" value="{!! Request::old('title', $form['defaults']['title']) !!}" type="text" class="form-control" placeholder="{{ trans('posts.post_title') }}">
+            <input name="title" value="{!! Request::old('title', $form['defaults']['title']) !!}" type="text" class="form-control" placeholder="Post Title">
             {!! ($errors->has('title') ? $errors->first('title') : '') !!}
         </div>
     </div>
 
     <div class="form-group{!! ($errors->has('summary')) ? ' has-error' : '' !!}">
-        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="summary">{{ trans('posts.post_summary') }}</label>
+        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="summary">Post Summary</label>
         <div class="col-lg-3 col-md-4 col-sm-5 col-xs-10">
-            <input name="summary" value="{!! Request::old('summary', $form['defaults']['summary']) !!}" type="text" class="form-control" placeholder="{{ trans('posts.post_summary') }}">
+            <input name="summary" value="{!! Request::old('summary', $form['defaults']['summary']) !!}" type="text" class="form-control" placeholder="Post Title">
             {!! ($errors->has('summary') ? $errors->first('summary') : '') !!}
         </div>
     </div>
 
     <div class="form-group{!! ($errors->has('body')) ? ' has-error' : '' !!}">
-        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="body">{{ trans('posts.post_body') }}</label>
-        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
-            <textarea name="body" provide="markdown" type="text" class="form-control"  placeholder="{{ trans('posts.post_body') }}" rows="10">{!! Request::old('body', $form['defaults']['body']) !!}</textarea>
+        <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="body">Post Body</label>
+        <div class="col-lg-6 col-md-8 col-sm-9 col-xs-12">
+            <textarea name="body" type="text" class="form-control" data-provide="markdown" placeholder="Post Body" rows="10">{!! Request::old('body', $form['defaults']['body']) !!}</textarea>
             {!! ($errors->has('body') ? $errors->first('body') : '') !!}
         </div>
     </div>

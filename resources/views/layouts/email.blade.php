@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ App::getLocale() }}">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 </head>
@@ -9,7 +9,8 @@
 @show
 <br>
 <p>
-{{ trans('globals.email_thanks_support') }}
+Thank you, <br>
+The Support Team
 </p>
 </body>
 </html>

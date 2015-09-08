@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-{{ trans('globals.edit') }} {{ $post->title }}
+Edit {{ $post->title }}
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>{{ trans('globals.edit') }} {{ $post->title }}</h1>
+<h1>Edit {{ $post->title }}</h1>
 </div>
 @stop
 
@@ -14,17 +14,12 @@
 <div class="row">
     <div class="col-xs-6">
         <p class="lead">
-            {{ trans('posts.please_edit_the_post') }}:
+            Please edit the post:
         </p>
     </div>
     <div class="col-xs-6">
         <div class="pull-right">
-            <a class="btn btn-success" href="{!! URL::route('blog.posts.show', array('posts' => $post->id)) !!}">
-                <i class="fa fa-file-text"></i> {{ trans('posts.show_post') }}
-            </a> 
-            <a class="btn btn-danger" href="#delete_post" data-toggle="modal" data-target="#delete_post">
-                <i class="fa fa-times"></i> {{ trans('posts.delete_post') }}
-            </a>
+            <a class="btn btn-success" href="{!! URL::route('blog.posts.show', array('posts' => $post->id)) !!}"><i class="fa fa-file-text"></i> Show Post</a> <a class="btn btn-danger" href="#delete_post" data-toggle="modal" data-target="#delete_post"><i class="fa fa-times"></i> Delete Post</a>
         </div>
     </div>
 </div>
@@ -32,15 +27,13 @@
 <div class="well">
     <?php
     $form = ['url' => URL::route('blog.posts.update', ['posts' => $post->id]),
-            'method'  => 'PATCH',
             'button'  => trans('posts.save_post'),
             '_method' => 'PATCH',
             'method'  => 'POST',
-            'button'  => 'Save Post',
             'defaults' => [
-            'title' => $post->title,
-            'summary' => $post->summary,
-            'body' => $post->body,
+                'title' => $post->title,
+                'summary' => $post->summary,
+                'body' => $post->body,
     ], ];
     ?>
     @include('posts.form')

@@ -32,13 +32,14 @@
 <div class="well">
     <?php
     $form = ['url' => URL::route('events.update', ['events' => $event->id]),
-        'method'   => 'PATCH',
-        'button'   => trans('events.save_event'),
-        'defaults' => [
-            'title'    => $event->title,
-            'date'     => $event->date->format(Config::get('date.php_format')),
-            'location' => $event->location,
-            'body'     => $event->body,
+             '_method'  => 'PATCH',
+             'method'   => 'POST',
+             'button'   => 'Save Event',
+             'defaults' => [
+             'title'    => $event->title,
+             'date'     => $event->date->format(Config::get('date.php_format')),
+             'location' => $event->location,
+             'body'     => $event->body,
     ], ];
     ?>
     @include('events.form')

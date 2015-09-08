@@ -32,9 +32,12 @@
 <div class="well">
     <?php
     $form = ['url' => URL::route('blog.posts.update', ['posts' => $post->id]),
-        'method' => 'PATCH',
-        'button' => trans('posts.save_post'),
-        'defaults' => [
+            'method'  => 'PATCH',
+            'button'  => trans('posts.save_post'),
+            '_method' => 'PATCH',
+            'method'  => 'POST',
+            'button'  => 'Save Post',
+            'defaults' => [
             'title' => $post->title,
             'summary' => $post->summary,
             'body' => $post->body,

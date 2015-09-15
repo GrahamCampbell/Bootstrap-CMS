@@ -22,7 +22,7 @@
     <div class="form-group{!! ($errors->has('body')) ? ' has-error' : '' !!}">
         <label class="col-md-2 col-sm-3 col-xs-10 control-label" for="body">{{ trans('posts.post_body') }}</label>
         <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
-            <textarea name="body" provide="markdown" type="text" class="form-control"  placeholder="{{ trans('posts.post_body') }}" rows="10">{!! Request::old('body', $form['defaults']['body']) !!}</textarea>
+            <textarea name="body" data-provide="markdown" type="text" class="form-control"  placeholder="{{ trans('posts.post_body') }}" rows="10">{!! Request::old('body', $form['defaults']['body']) !!}</textarea>
             {!! ($errors->has('body') ? $errors->first('body') : '') !!}
         </div>
     </div>

@@ -27,10 +27,10 @@ class ShowNavDisplayer extends AbstractDisplayer
     protected function current()
     {
         if ($this->wrappedObject->new_value) {
-            return 'You added '.$this->name(false).'to the nav bar.';
+            return  trans('pages.added_page_to_nav', ['name' => $this->name(false)]);
         }
 
-        return 'You removed '.$this->name(false).'from the nav bar.';
+        return trans('pages.removed_page_to_nav', ['name' => $this->name(false)]);
     }
 
     /**
@@ -42,9 +42,9 @@ class ShowNavDisplayer extends AbstractDisplayer
     protected function external()
     {
         if ($this->wrappedObject->new_value) {
-            return 'This user added '.$this->name(false).'to the nav bar.';
+            return  trans('pages.user_added_page_to_nav', ['name' => $this->name(false)]);
         }
 
-        return 'This user removed '.$this->name(false).'from the nav bar.';
+        return trans('pages.user_removed_page_to_nav', ['name' => $this->name(false)]);
     }
 }

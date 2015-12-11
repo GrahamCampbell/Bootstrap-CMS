@@ -26,7 +26,7 @@ class TitleDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the title of'.$this->name();
+        return trans('events.updated_title_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class TitleDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the title of'.$this->name();
+        return trans('events.user_updated_title_of').$this->name();
     }
 }

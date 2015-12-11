@@ -117,7 +117,7 @@ class Page extends AbstractModel implements HasPresenter
     public function beforeDelete()
     {
         if ($this->slug == 'home') {
-            throw new \Exception('You cannot delete the homepage.');
+            throw new \Exception(trans('globals.cannot_delete_homepage'));
         }
     }
 }

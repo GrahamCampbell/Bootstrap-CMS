@@ -26,7 +26,7 @@ class CssDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the css of'.$this->name();
+        return trans('pages.updated_css_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class CssDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the css of'.$this->name();
+        return trans('pages.user_updated_css_of').$this->name();
     }
 }

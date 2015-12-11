@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
 @section('title')
-Create Post
+{{ trans('posts.create_post') }}
 @stop
 
 @section('top')
 <div class="page-header">
-<h1>Create Post</h1>
+<h1>{{ trans('posts.create_post') }}</h1>
 </div>
 @stop
 
@@ -15,7 +15,7 @@ Create Post
     <?php
     $form = ['url' => URL::route('blog.posts.store'),
         'method' => 'POST',
-        'button' => 'Create New Post',
+        'button' => trans('posts.create_new_post'),
         'defaults' => [
             'title' => '',
             'summary' => '',

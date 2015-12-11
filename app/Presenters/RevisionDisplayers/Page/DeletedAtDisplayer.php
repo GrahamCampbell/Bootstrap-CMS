@@ -25,7 +25,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Deleted Page';
+        return trans('pages.deleted_page');
     }
 
     /**

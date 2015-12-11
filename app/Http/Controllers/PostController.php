@@ -85,7 +85,7 @@ class PostController extends AbstractController
         $post = PostRepository::create($input);
 
         return Redirect::route('blog.posts.show', ['posts' => $post->id])
-            ->with('success', 'Your post has been created successfully.');
+            ->with('success', trans('posts.your_post_has_been_created_successfully'));
     }
 
     /**
@@ -142,7 +142,7 @@ class PostController extends AbstractController
         $post->update($input);
 
         return Redirect::route('blog.posts.show', ['posts' => $post->id])
-            ->with('success', 'Your post has been updated successfully.');
+            ->with('success', trans('posts.your_post_has_been_updated_successfully'));
     }
 
     /**
@@ -160,7 +160,7 @@ class PostController extends AbstractController
         $post->delete();
 
         return Redirect::route('blog.posts.index')
-            ->with('success', 'Your post has been deleted successfully.');
+            ->with('success', trans('posts.your_post_has_been_deleted_successfully'));
     }
 
     /**
@@ -175,7 +175,7 @@ class PostController extends AbstractController
     protected function checkPost($post)
     {
         if (!$post) {
-            throw new NotFoundHttpException('Post Not Found');
+            throw new NotFoundHttpException(trans('posts.post_not_found'));
         }
     }
 }

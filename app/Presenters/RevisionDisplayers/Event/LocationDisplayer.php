@@ -26,7 +26,7 @@ class LocationDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the location of'.$this->name();
+        return trans('events.updated_location_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class LocationDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the location of'.$this->name();
+        return trans('events.user_updated_location_of').$this->name();
     }
 }

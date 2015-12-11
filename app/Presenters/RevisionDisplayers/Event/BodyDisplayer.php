@@ -26,7 +26,7 @@ class BodyDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You updated the description of'.$this->name();
+        return trans('events.you_updated_description_of').$this->name();
     }
 
     /**
@@ -37,6 +37,6 @@ class BodyDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user updated the description of'.$this->name();
+        return trans('events.user_updated_description_of').$this->name();
     }
 }

@@ -27,7 +27,7 @@ abstract class AbstractDisplayer extends AbstractRevisionDisplayer
      */
     public function title()
     {
-        return 'Updated Event';
+        return trans('events.updated_event');
     }
 
     /**

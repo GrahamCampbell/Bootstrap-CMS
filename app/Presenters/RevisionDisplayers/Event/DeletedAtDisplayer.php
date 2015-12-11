@@ -25,7 +25,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Deleted Event';
+        return trans('events.deleted_event');
     }
 
     /**
@@ -36,7 +36,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You deleted the event called'.$this->name();
+        return trans('events.deleted_event_called').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user deleted the event called'.$this->name();
+        return trans('events.user_deleted_event_called').$this->name();
     }
 }

@@ -25,7 +25,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Deleted Comment';
+        return trans('posts.delete_comment');
     }
 
     /**
@@ -36,7 +36,7 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You deleted a comment on'.$this->name();
+        return trans('posts.deleted_comment_on').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class DeletedAtDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user deleted a comment on'.$this->name();
+        return trans('posts.user_deleted_comment_on').$this->name();
     }
 }

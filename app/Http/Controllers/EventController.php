@@ -89,7 +89,7 @@ class EventController extends AbstractController
         $event = EventRepository::create($input);
 
         return Redirect::route('events.show', ['events' => $event->id])
-            ->with('success', 'Your event has been created successfully.');
+            ->with('success', trans('events.your_event_has_been_created_successfully'));
     }
 
     /**
@@ -146,7 +146,7 @@ class EventController extends AbstractController
         $event->update($input);
 
         return Redirect::route('events.show', ['events' => $event->id])
-            ->with('success', 'Your event has been updated successfully.');
+            ->with('success', trans('events.your_event_has_been_updated_successfully'));
     }
 
     /**
@@ -164,7 +164,7 @@ class EventController extends AbstractController
         $event->delete();
 
         return Redirect::route('events.index')
-            ->with('success', 'Your event has been deleted successfully.');
+            ->with('success', trans('events.your_event_has_been_deleted_successfully'));
     }
 
     /**
@@ -179,7 +179,7 @@ class EventController extends AbstractController
     protected function checkEvent($event)
     {
         if (!$event) {
-            throw new NotFoundHttpException('Event Not Found');
+            throw new NotFoundHttpException(trans('events.event_not_found'));
         }
     }
 }

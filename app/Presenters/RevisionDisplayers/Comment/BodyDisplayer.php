@@ -25,7 +25,7 @@ class BodyDisplayer extends AbstractDisplayer
      */
     public function title()
     {
-        return 'Edited Comment';
+        return trans('posts.edited_comment');
     }
 
     /**
@@ -36,7 +36,7 @@ class BodyDisplayer extends AbstractDisplayer
      */
     protected function current()
     {
-        return 'You edited a comment on'.$this->name();
+        return trans('posts.edited_comment_on').$this->name();
     }
 
     /**
@@ -47,6 +47,6 @@ class BodyDisplayer extends AbstractDisplayer
      */
     protected function external()
     {
-        return 'This user edited a comment on'.$this->name();
+        return trans('posts.user_edited_comment_on').$this->name();
     }
 }

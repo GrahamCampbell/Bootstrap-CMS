@@ -20,7 +20,7 @@ Bootstrap CMS was created by, and is maintained by [Graham Campbell](https://git
 
 1. There are 3 ways of grabbing the code:
   * Use GitHub: simply download the zip on the right of the readme
-  * Use Git: `git clone git@github.com:BootstrapCMS/CMS.git`
+  * Use Git: `git clone https://github.com/BootstrapCMS/CMS.git`
   * Use Composer: `composer create-project graham-campbell/bootstrap-cms --prefer-dist -s dev`
 2. From a command line open in the folder, run `composer install --no-dev -o` and then `npm install`.
 3. Enter your database details into `config/database.php`.

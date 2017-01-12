@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-xs-8">
                 <p class="text-muted credit">
-                    &copy; <a href="https://github.com/GrahamCampbell">{{ Config::get('cms.author') }}</a> 2015. All rights reserved.
+                    &copy; {{ Config::get('cms.author') }} {{ date("Y") }}. All rights reserved. Powered by <a href="https://github.com/BootstrapCMS/CMS">BootstrapCMS</a>
                 </p>
             </div>
             <div class="col-xs-4">
@@ -17,7 +17,7 @@
     </div>
     <div class="container visible-xs">
         <p class="text-muted credit">
-            &copy; <a href="https://github.com/GrahamCampbell">{{ Config::get('cms.author') }}</a> 2015. All rights reserved.
+            &copy; {{ Config::get('cms.author') }} {{ date("Y") }}. All rights reserved. Powered by <a href="https://github.com/BootstrapCMS/CMS">BootstrapCMS</a>
         </p>
     </div>
 </div>
